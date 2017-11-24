@@ -141,6 +141,8 @@ export default class Board extends PureComponent {
       case 'ArrowDown':
         newBoard = moveDown(this.state.board);
         break;
+      default:
+        return;
     }
     this.props.onScore(globalScore);
     if (!isEqual(newBoard, this.state.board)) {
